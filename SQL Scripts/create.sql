@@ -41,9 +41,9 @@ CREATE TABLE DELIVERY_ITEM (
     DestinationAddress VARCHAR(100),
     DeliveryDate DATE,
     CustomerId INT,
-    CentreId INT,
+    SourceId INT,
     ScheduleNumber INT,
     FOREIGN KEY (CustomerId) REFERENCES CUSTOMER(CustomerId),
-    FOREIGN KEY(CentreId) REFERENCES RETAIL_CENTRE(CentreId),
+    FOREIGN KEY(SourceId) REFERENCES RETAIL_CENTRE(CentreId),
     FOREIGN KEY(ScheduleNumber) REFERENCES TRANSPORTATION_EVENT(ScheduleNumber)
 );
