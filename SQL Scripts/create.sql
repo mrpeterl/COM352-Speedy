@@ -118,5 +118,5 @@ VALUES (1, '2x2x4', 4000.0, 'New York', '2020-04-01', 10, 4, 1);
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
 VALUES (1, '2x2x4', 10000.0, 'New York', '2020-04-01', 9, 3, 1);
 
-INSERT INTO DELIVERY_ITEM(ItemNumber, ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, SourceId, CentreId, ScheduleNumber)
+INSERT INTO DELIVERY_ITEM(ItemNumber, ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId,SourceId, ScheduleNumber)
 VALUES (90876442, 7, '2x2x4', 6000.0, 'New York', '2020-04-01', 11, 4, 1);
