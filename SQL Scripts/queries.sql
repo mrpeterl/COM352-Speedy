@@ -19,3 +19,29 @@ UPDATE DELIVERY_ITEM
 SET DeliveryDate = DATE_ADD(CURDATE(), INTERVAL 1 DAY)
 WHERE DeliveryDate = CURDATE()
 AND SourceId = 1;
+
+-- Query 3 
+
+SELECT * 
+FROM RETAIL_CENTRE 
+WHERE CentreId 
+IN (SELECT SourceId FROM DELIVERY_ITEM WHERE ItemWeight > 32);
+
+-- Query 4 
+
+SELECT di.DestinationAddress, dt.DeliveryType 
+FROM DELIVERY_ITEM di 
+JOIN TRANSPORTATION_EVENT te 
+ON di.ScheduleNumber = te.ScheduleNumber 
+JOIN DELIVERY_TYPE dt 
+ON te.TransportationType = dt.DeliveryTypeId 
+WHERE di.SourceId = '1025';
+
+-- Query to retrieve information about items sent by customers who live in Belfast 
+
+SELECT di.* 
+FROM DELIVERY_ITEM di 
+JOIN CUSTOMER c 
+ON di.CustomerId = c.CustomerId 
+WHERE c.CustomerAddress 
+LIKE '%Belfast%';
