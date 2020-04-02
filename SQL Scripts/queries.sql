@@ -26,3 +26,13 @@ SELECT *
 FROM RETAIL_CENTRE 
 WHERE id 
 IN (SELECT id FROM DELIVERY_ITEM WHERE ItemWeight > 32);
+
+-- Query 4 
+
+SELECT di.DestinationAddress, dt.DeliveryType 
+FROM DELIVERY_ITEM di 
+JOIN TRANSPORTATION_EVENT te 
+ON di.ScheduleNumber = te.ScheduleNumber 
+JOIN DELIVERY_TYPE dt 
+ON te.TransportationType = dt.DeliveryTypeId 
+WHERE di.SourceId = '1025';
