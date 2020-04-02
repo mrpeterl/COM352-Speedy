@@ -36,3 +36,12 @@ ON di.ScheduleNumber = te.ScheduleNumber
 JOIN DELIVERY_TYPE dt 
 ON te.TransportationType = dt.DeliveryTypeId 
 WHERE di.SourceId = '1025';
+
+-- Query to retrieve information about items sent by customers who live in Belfast 
+
+SELECT di.* 
+FROM DELIVERY_ITEM di 
+JOIN CUSTOMER c 
+ON di.CustomerId = c.CustomerId 
+WHERE c.CustomerAddress 
+LIKE '%Belfast%';
