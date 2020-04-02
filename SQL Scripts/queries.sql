@@ -24,8 +24,8 @@ AND SourceId = 1;
 
 SELECT * 
 FROM RETAIL_CENTRE 
-WHERE id 
-IN (SELECT id FROM DELIVERY_ITEM WHERE ItemWeight > 32);
+WHERE CentreId 
+IN (SELECT SourceId FROM DELIVERY_ITEM WHERE ItemWeight > 32);
 
 -- Query 4 
 
