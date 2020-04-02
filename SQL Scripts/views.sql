@@ -13,36 +13,12 @@ CREATE VIEW Speedy.RetailIncoming
 AS
     SELECT * 
     FROM Speedy.DELIVERY_ITEM 
-    JOIN Speedy.RETAIL_CENTRE ON Speedy.RETAIL_CENTRE.CentreAddress = Speedy.DELIVERY_ITEM.DestinationAddress
-    WHERE Speedy.DELIVERY_ITEM.DestinationAddress = '2'
+    WHERE Speedy.DELIVERY_ITEM.DestinationAddress = 'New York'
     AND Speedy.DELIVERY_ITEM.DeliveryDate = DATE_ADD(CURDATE(), INTERVAL 1 DAY);
 
 CREATE VIEW Speedy.RetailOutgoing
 AS
     SELECT *
     FROM Speedy.DELIVERY_ITEM
-    JOIN Speedy.RETAIL_CENTRE ON Speedy.RETAIL_CENTRE.CentreAddress = Speedy.DELIVERY_ITEM.SourceId
-    WHERE Speedy.RETAIL_CENTRE.CentreId = '1'
-    AND Speedy.DELIVERY_ITEM.DeliveryDate = NOW();
-
--- CREATE TABLE DELIVERY_ITEM (
---     ItemNumber INT NOT NULL IDENTITY PRIMARY KEY,
---     ItemWeight INT,
---     Dimensions VARCHAR(11),
---     InsuranceAmount DECIMAL(11, 2),
---     DestinationAddress VARCHAR(100),
---     DeliveryDate DATE,
---     CustomerId INT,
---     CentreId INT,
---     ScheduleNumber INT,
---     FOREIGN KEY (CustomerId) REFERENCES CUSTOMER(CustomerId),
---     FOREIGN KEY(CentreId) REFERENCES CENTRE(CentreId),
---     FOREIGN KEY(ScheduleNumber) REFERENCES TRANSPORTATION_EVENT(ScheduleNumber)
--- );
-
--- CREATE TABLE TRANSPORTATION_EVENT (
---     ScheduleNumber INT NOT NULL IDENTITY PRIMARY KEY,
---     TransportationType INT,
---     DeliveryRoute VARCHAR(100),
---     FOREIGN KEY (TransportationType) REFERENCES DELIVERY_TYPE(DeliveryTypeId)
--- );
+    WHERE Speedy.DELIVERY_ITEM.SourceId = '3'
+    AND Speedy.DELIVERY_ITEM.DeliveryDate = DATE_ADD(CURDATE(), INTERVAL 1 DAY);

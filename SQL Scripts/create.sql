@@ -89,34 +89,34 @@ INSERT INTO TRANSPORTATION_EVENT(TransportationType, DeliveryRoute) VALUES (1, '
 INSERT INTO TRANSPORTATION_EVENT(TransportationType, DeliveryRoute) VALUES (4, 'Belfast to New York');	
 
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
-VALUES (3, '2x2x4', 1000.0, 'London', '2020-04-01', 1, 1025, 1);
+VALUES (3, '2x2x4', 1000.0, 'London', '2020-04-02', 1, 1025, 1);
 
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
-VALUES (5, '4x9x2', 15000.0, 'London', '2020-04-01', 1, 1025, 2);
+VALUES (5, '4x9x2', 15000.0, 'London', '2020-04-03', 1, 1025, 2);
 
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
-VALUES (4, '9x9x2', 17000.0, 'London', '2020-04-01', 1, 1025, 3);
+VALUES (4, '9x9x2', 17000.0, 'London', '2020-04-02', 1, 1025, 3);
 
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
-VALUES (8, '2x2x4', 19000.0, 'Belfast', '2020-04-01', 5, 3, 1);
+VALUES (8, '2x2x4', 19000.0, 'Belfast', '2020-04-03', 5, 3, 1);
 
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
-VALUES (30, '2x2x4', 21000.0, 'Belfast', '2020-04-01', 5, 4, 1);
+VALUES (30, '2x2x4', 21000.0, 'Belfast', '2020-04-02', 5, 4, 1);
 
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
-VALUES (45, '2x2x4', 21000.0, 'New York', '2020-04-01', 9, 3, 1);
+VALUES (45, '2x2x4', 21000.0, 'New York', '2020-04-02', 9, 3, 1);
 
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
-VALUES (37, '2x2x4', 19000.0, 'New York', '2020-04-01', 11, 4, 1);
+VALUES (37, '2x2x4', 19000.0, 'New York', '2020-04-02', 11, 4, 1);
 
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
-VALUES (35, '2x2x4', 7500.0, 'New York', '2020-04-01', 12, 3, 1);
+VALUES (35, '2x2x4', 7500.0, 'New York', '2020-04-02', 12, 3, 1);
 
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
-VALUES (1, '2x2x4', 4000.0, 'New York', '2020-04-01', 10, 4, 1);
+VALUES (1, '2x2x4', 4000.0, 'New York', '2020-04-02', 10, 4, 1);
 
 INSERT INTO DELIVERY_ITEM(ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId, SourceId, ScheduleNumber)
-VALUES (1, '2x2x4', 10000.0, 'New York', '2020-04-01', 9, 3, 1);
+VALUES (1, '2x2x4', 10000.0, 'New York', '2020-04-03', 9, 3, 1);
 
 INSERT INTO DELIVERY_ITEM(ItemNumber, ItemWeight, Dimensions, InsuranceAmount, DestinationAddress, DeliveryDate, CustomerId,SourceId, ScheduleNumber)
-VALUES (90876442, 7, '2x2x4', 6000.0, 'New York', '2020-04-01', 11, 4, 1);
+VALUES (90876442, 7, '2x2x4', 6000.0, 'New York', '2020-04-03', 11, 4, 1);
